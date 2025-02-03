@@ -1,0 +1,632 @@
+\documentclass[12pt,a4paper,twoside]{book}
+%\documentclass[12pt]{ieeetran}
+\usepackage{amsmath,amssymb, amsfonts,float,mathtools,enumerate,hyperref,graphicx}
+\usepackage{makecell}
+\usepackage{titlesec} % For section title formatting
+
+\usepackage[top=1in,left=.75in,right=.75in,bottom=1in]{geometry}
+\usepackage{multicol,vwcol}
+\usepackage[inline]{enumitem}
+\usepackage{tikz,lmodern}
+\usepackage[most]{tcolorbox}
+
+%% blind text and multicols
+\usepackage{blindtext,lipsum,xcolor,awesomebox}
+
+\parindent 0px
+
+\newcommand{\AUTHOR}{Santanu Kundu}
+\newcommand{\TITLE}{Collection of Integration Problems}
+\newcommand{\SUBTITLE}{With Rarest Collections}
+\newcommand{\DATE}{28th October, 2023}
+\newcommand{\VERSION}{0.0.1}
+%% Settings
+\tcbset{colback=white!80!black!100,colframe=black}
+
+
+%% Macros
+\newcommand{\dint}[1]{\displaystyle{\int #1 \  dx}}
+\newcommand{\rint}[1]{\resizebox{4.0cm}{!}{$\dint{#1}$}}
+\newcommand{\cosec}[1]{\displaystyle{\text{cosec}\ #1}}
+\newcommand{\coseci}[1]{\displaystyle{\text{cosec}^{-1}\ #1}}
+
+\newcommand{\answer}[1]{\textit{\textbf{Answers}} \vhrulefill{.1em}
+\ \\[2pt]
+#1
+\vspace{5pt}\hrule height .1em }
+
+\newcommand\crule[3][black]{\textcolor{#1}{\rule{#2}{#3}}}
+\def\vhrulefill#1{\leaders\hrule height #1\hfill}
+
+\title{\LARGE \TITLE \\ [10pt]
+\large \SUBTITLE
+}
+
+\author{\AUTHOR}
+\date{\DATE}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction} \markboth{INTRODUCTION}{} \lipsum[1-5]
+
+
+\chapter{Indefinite Integrals}
+
+\section{Simplification and Substitution Based}
+Here we need to simplify first and then substitute with $z=f(x)$ and integrate them. There are several types of simplification, such as 
+\begin{enumerate}
+\item Partial Fractions
+\item $\dfrac{1}{\sqrt{f(x)}-\sqrt{g(x)}}$ or $\dfrac{1}{f(x)\ g(x)}$, where $f(x)-g(x)=constant$
+\item Trigonometric based simplification
+\item Many more...
+\end{enumerate}
+\vspace{0.05cm}
+
+\subsubsection{Problems}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\dint{\dfrac{x-1}{(x+1)(x-2)}}$
+\item $\dint{\dfrac{(x-1)^2}{(x^2+1)^2}}$
+\item $\dint{\dfrac{x^2+1}{x^4-1}}$
+\item $\dint{\dfrac{x^2-1}{x^4-1}}$
+\item $\dint{\dfrac{1}{x\sqrt{x^2-a^2}}}$, where $a\geq0$
+\item $\dint{\dfrac{x^2}{(1+x^2)(1+\sqrt{1+x^2})}}$
+\item $\dint{\sqrt{x}\ (1+x^{1/3})^4}$
+\item $\dint{\dfrac{1}{x(x^n+1)}}$
+\item \resizebox{3.5cm}{!}{$\dint{\dfrac{1}{(1+x^2)^\frac{3}{2}}}$}
+\item \resizebox{3.5cm}{!}{$\dint{\dfrac{1}{(2ax+x^2)^\frac{3}{2}}}$}
+\item \rint{\dfrac{1}{(a^2-b^2x^2)^{3/2}}}
+\item $\dint{\dfrac{1}{(x+2)(x^2+1)}}$
+\item $\dint{\dfrac{\sqrt{x-1}}{x\ \sqrt{x+1}}}$
+\item $\dint{\dfrac{x^9}{(4x^2+1)^6}}$
+\item $\dint{\dfrac{1}{x\sqrt{1-x^3}}}$
+\item $\dint{\dfrac{1}{x^2\ (x^n+1)^{(n-1)/n}}}$
+\item $\dint{(x^2+x)(x^{-8}+2x^{-9})^{1/10}}$
+\item $\dint{x^5(1+x^3)^{2/3}}$
+\item $\dint{\sqrt{x^2+1}\ \dfrac{\ln{(x^2+1)}-2\ln{x}}{x^4}}$
+\item $\dint{\sqrt{\dfrac{1-\sqrt{x}}{1+\sqrt{x}}}}$
+\item $\dint{\dfrac{1}{x}\ \sqrt{\dfrac{1-\sqrt{x}}{1+\sqrt{x}}}}$
+\item $\dint{\dfrac{x^2}{\sqrt{1-x}}}$
+\item $\dint{\dfrac{\sqrt{a}-\sqrt{x}}{1-\sqrt{ax}}}$
+\item $\dint{\dfrac{(\sqrt{x})^5}{\sqrt{x})^7+x^6}}$
+\item $\dint{\dfrac{x^4+1}{x(x^2+1)^2}}$
+\item $\dint{\dfrac{1}{\sqrt[3]{x}+\sqrt[4]{x}}}$
+\item $\dint{\dfrac{x^2-1}{x^3 \sqrt{2x^4-2x^2+1}}}$
+\item $\dint{\dfrac{1}{(7x-10-x^2)^{3/2}}}$
+\item $\dint{\dfrac{1}{(2x-5-x^2)^{3/2}}}$
+% exponential
+\item $\dint{ \left(e^x+e^{-x}\right )^2 \ \left(e^x-e^{-x}\right )}$
+\item $\dint{\sqrt{e^x-1}}$
+\item $\dint{\sqrt{\dfrac{e^x-1}{e^x+1}}}$
+
+%% Trigonometric
+\item $\dint{\dfrac{1+x}{x+e^{-x}}}$
+\item $\dint{\dfrac{\sin x+\cos x}{\sqrt{1+\sin 2x}}}$
+\item $\dint{\sqrt{1-\sin x}}$
+\item $\dint{\sqrt{1-\cos x}}$
+\item $\dint{\sqrt{1+\sin x}}$
+\item $\dint{\sqrt{1+\cos x}}$
+\item $\dint{\sqrt{\sec x-1}}$
+\item $\dint{\sqrt{\cosec{x}-1}}$
+\item $\dint{(\sqrt{\cot x} -\sqrt{\tan x})}$
+\item $\dint{\sqrt{\dfrac{\cos x -\cos ^3 x}{1-\cos ^3 x}}}$
+\item $\dint{\dfrac{1}{\sqrt{\sin^3x\ \cos^5x}}}$
+%% Trigonometric Partial Fractions
+\item $\dint{\dfrac{1}{\sin x - \sin 2x}}$
+\item $\dint{\dfrac{1-\cos x}{\cos x(1+\cos x)}}$
+%% Trigonometric Special
+\item $\dint{\dfrac{\sec ^2 x}{(\sec x+\tan x)^{9/2}}}$
+\item $\dint{\dfrac{\sec ^2 x}{(\sec x+\tan x)^n}}$
+\item $\dint{\dfrac{\cos^3x+\cos^5x}{\sin^2x+\sin^4x}}$
+\end{enumerate}
+\end{multicols}
+
+
+\newpage
+\section{U-V Rule or By Parts}
+There are several types of these integration.
+	\subsection{Type I: $\dint{e^{g(x)}(g'(x)\ f(x)+f'(x))}$}
+When $g(x) = x$, it becomes $\dint{e^{x}(f(x)+f'(x))}$, which is most common problem. Here you need to first convert into above forms, and then just identify $f(x)$ and then balance $f'(x)$ and continue. If you use this trick, you will solve any problem very quickly.
+\subsubsection{Problems}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\dint{\dfrac{\ln{x}}{(1+\ln x)^2}}$
+\item $\dint{e^{x^2-z^2} \left\{2x\cos (2xz)- 2z \sin (2xz)\right\}}$
+\item $\dint{e^{x^x}(\ln x +1)x^{2x}}$
+\item $\dint{e^{(e^x+e^{-x})}(e^{2x}+2e^x-e^{-x}-1)}$
+\item $\dint{\dfrac{2+x}{x^3}e^{-x}}$
+%\item $\dint{e^x (\sin x -\cos x)}$
+\end{enumerate}
+\end{multicols}
+	\subsection{Type II: $\dint{f(x)g'(x)+f'(x)g(x)}$ or Cancellation Based}
+	
+	\subsubsection{Problems}
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\dint{e^x (\sin x+ \cos x)}$
+	\item $\dint{(1+\ln x)\ln{(\ln x)}}$
+	\item $\dint{\dfrac{\sec^2{(1+\ln x)}-\tan{(1+\ln x)}}{x^2}}$
+	\item $\dint{}$
+	\end{enumerate}
+	\end{multicols}
+%	\subsection{Type III: Formula Based Problems}
+	
+%	\subsubsection{Problems}
+%	\begin{multicols}{2}
+%	\begin{enumerate}
+%	\item 
+%	\end{enumerate}
+%	\end{multicols}
+	
+	\subsection{Type III: More ILATE Problems}
+	\subsubsection{Problems}
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\dint{\dfrac{\ln(1+\sqrt[6]{x})}{\sqrt[3]{x}+\sqrt{x}}}$ \hfill\textbf{[IIT]}
+	%%% Trigonometric
+	\item $\dint{\sin{\sqrt{x}}}$
+	\item $\dint{\cos{\sqrt{x}}}$
+	\item $\dint{\sin^{-1}{x}}$
+	\item $\dint{\cos^{-1}{x}}$
+	\item $\dint{\tan^{-1}{x}}$
+	\item $\dint{\sec^{-1}{x}}$
+	\item $\dint{\cot^{-1}{x}}$
+	\item $\dint{\coseci{x}}$
+	\item $\dint{\sin^{-1}{\sqrt x}}$
+	\item $\dint{\cos^{-1}{\sqrt x}}$
+	\item $\dint{\tan^{-1}{\sqrt x}}$
+	\item $\dint{\sec^{-1}{\sqrt x}}$
+	\item $\dint{\cot^{-1}{\sqrt x}}$
+	\item $\dint{\coseci{\sqrt x}}$
+	\item $\dint{\dfrac{\sin^{-1}{\sqrt x} -\cos^{-1}{\sqrt x}}{\sin^{-1}{\sqrt x}+\cos^{-1}{\sqrt x}}}$
+	\item $\dint{\cot^{-1}{(x^2+x+1)}}$
+	\item $\dint{\dfrac{\tan^{-1}x}{x^4}}$
+	\end{enumerate}
+	\end{multicols}
+\section{$\lambda-\mu$ Based Problems}
+	There are several forms. 
+	\subsubsection{Problems}
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\dint{\dfrac{a\sin x+ b\cos x}{b\sin x+ a\cos x}}$
+	\item $\dint{\dfrac{3e^x-5e^{-x}}{4e^x+5e^{-x}}}$
+	\item $\dint{\dfrac{x}{(7x-10-x^2)^{3/2}}}$
+	\item $\dint{\dfrac{x}{(2x-5-x^2)^{3/2}}}$
+	\end{enumerate}
+	\end{multicols}
+\section{Using Differentiation}
+Usually, form of this type is $\dint{\dfrac{f(x)}{g^2(x)}}$. We need to extract into below form. $${\dfrac{d}{dx}\left(\dfrac{\psi(x)}{g(x)}\right)}=\dfrac{f(x)}{g^2(x)}+h(x)$$Just we need to find $\psi(x)$ such that $h(x)$ can be integrated easily.
+\subsubsection{Problems}
+\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\dint{\dfrac{x^2+n(n-1)}{(x\sin x+ n\cos x)^2}}$
+	\item $\dint{\dfrac{a+b\sin x}{(b+a\sin x)^2}}$
+	\end{enumerate}
+	\end{multicols}
+\section{Bi-quadratic Forms}
+It is one of beautiful section of interesting problems. What you need is observation and practice!
+
+\begin{table}[H]
+\def\arraystretch{2.5}
+\setlength{\arrayrulewidth}{0.5mm}
+\centering
+\caption{Rules of substitution}
+\vspace{10pt}
+\begin{tabular}{rl}
+\hline
+\textbf{Forms} & \textbf{Substitution} \\ \hline
+$\dint{\dfrac{1}{(ax+b)\sqrt{px+q}}}$ & $px+q=z^2$ \\ 
+$\dint{\dfrac{1}{(ax^2+bx+c)\sqrt{px+q}}}$ & $px+q=z^2$ \\
+$\dint{\dfrac{1}{(ax+b)\sqrt{px^2+qx+r}}}$ & $ax+b=\dfrac{1}{z}$ \\ 
+$\dint{\dfrac{1}{(ax^2+b)\sqrt{px^2+q}}}$ & $\sqrt{px^2+q}=xz$ \\ 
+$\dint{\dfrac{1}{(x-a)^m (x-b)^n}}$ & $x-a=z(x-b) $ \\
+$\dint{R(x,\sqrt{ax^2+bx+c})}$ & $ 
+\sqrt{ax^2+bx+c}= 
+\begin{cases}
+t \pm x\sqrt{a}, & \text{if }a>0 \\
+tx \pm \sqrt{c}, & \text{if }c>0 \\
+(x-\alpha)\ t,     & \text{if }\alpha\text{ is real root of }ax^2+bx+c=0
+\end{cases}
+
+$
+\\ [10pt]
+\hline
+\end{tabular}
+\end{table}
+Last one is called \textbf{Euler's Substitution}.There could be many forms like these.
+\subsubsection{Problems}
+\begin{multicols}{2}
+\begin{enumerate}
+\item $\dint{\dfrac{x^2+1}{x^4+1}}$
+\item $\dint{\dfrac{x^2-1}{x^4+1}}$
+\item $\dint{\dfrac{x^2}{x^4+1}}$
+\item $\dint{\dfrac{1}{x^4+1}}$
+
+\item $\dint{\dfrac{x^2-1}{x^4+x^2+1}}$
+\item $\dint{\dfrac{x^2+1}{x^4-x^2+1}}$
+\item $\dint{\dfrac{1}{x^4+x^2+1}}$
+\item $\dint{\dfrac{1}{x^4-x^2+1}}$
+\item $\dint{\dfrac{1}{x^4+ax^2+1}}$
+\item $\dint{\dfrac{(x-1)^2}{x^4+x^2+1}}$
+\item $\dint{\dfrac{x^2+a^2}{x^4+a^4}}$
+\item $\dint{\dfrac{x^4+1}{x^6+1}}$
+\item $\dint{\dfrac{x^2-1}{(x^2+1)\sqrt{1+x^4}}}$
+\item $\dint{\dfrac{\sqrt{x^2+1}}{x^4}}$
+\item $\dint{\dfrac{x^4-1}{x^2 \sqrt{x^4+x^2+1}}}$
+\item $\dint{\dfrac{x^4+1}{x(x^2+1)^2}}$
+%% Linear and Quadratic
+\item $\dint{\dfrac{1}{(x+1)\sqrt{x^2-1}}}$
+\item $\dint{\dfrac{1}{(x-1)\sqrt{x^2+4}}}$
+\item $\dint{\dfrac{1}{(x^2-4)\sqrt{x+1}}}$
+\item $\dint{\dfrac{x+2}{(x^2+3x+3)\sqrt{x+1}}}$
+\item $\dint{\dfrac{1}{(1-x^2)\sqrt{1+x^2}}}$
+\item $\dint{\dfrac{1}{x\sqrt{ax-x^2}}}$
+%% Partial Fractions
+\item $\dint{\dfrac{x^2}{(x-1)^3(x+1)}}$
+\item $\dint{\dfrac{x}{x^3-1}}$
+\item $\dint{\dfrac{x^2-2}{x^5-x}}$
+\item $\dint{\dfrac{x^2+x+1}{(x+1)^2(x+2)}}$
+\item $\dint{x\ \sqrt{\dfrac{1-x}{1+x}}}$
+\item $\dint{\dfrac{1}{x\sqrt{1+x^3}}}$
+\item $\dint{\dfrac{1+x^2}{\sqrt{1-x^2}}}$
+
+%% Euler's Substitution
+\item $\dint{\dfrac{1}{1+\sqrt{x^2+2x+2}}}$
+\item $\dint{\dfrac{1}{x+\sqrt{x^2-x+1}}}$
+\item $\dint{\dfrac{1}{x-\sqrt{x^2+2x+4}}}$
+\item $\dint{\dfrac{x}{(7x-10-x^2)^{3/2}}}$ \footnote{It can be solved other ways too!}
+%% Trigonometric
+\begin{center}
+\textbf{Trigonometric}
+\end{center}
+\item $\dint{\dfrac{\sin x+\cos x}{\sin ^4 x+\cos ^4 x}}$
+\item $\dint{\dfrac{1}{\sin ^4 x+\cos ^4 x}}$
+\item $\dint{\dfrac{1}{\sin ^6 x+\cos ^6 x}}$
+\item $\dint{\dfrac{\cot x+\cot ^3 x}{1+\cot^3 x}}$
+\item $\dint{\sqrt{\tan x}+\sqrt{\cot x}}$
+\item $\dint{\sqrt{\tan x}}$
+\item $\dint{\sqrt{\cot x}}$
+
+\end{enumerate}
+\end{multicols}
+
+\newpage
+\section{Miscellaneous Problems}
+\begin{enumerate}
+\begin{multicols}{2}
+\item $\dint{\dfrac{x^6+x^3+1}{(2x^6+3x^3+6)^{2/3}}}$ = ?
+\item $\dint{\dfrac{x^2+x}{(e^x+x+1)^2}}$ = ?
+\item $\dint{\dfrac{\sec x}{\sqrt{1+2\sec x}}\sqrt{\dfrac{\cosec{x}-\cot x}{\cosec{x}+\cot x}}}$
+\item $\dint{\dfrac{f'(x)x-f(x)}{(f(x)+1)\sqrt{f(x)x-x^2}}}$ = ?
+\end{multicols}
+
+\item Let $4x^4-24x^3+31x^2+6x-8=0$ has roots $\alpha$, $\beta$, $\gamma$ and $\delta$, where $\alpha < \beta < \gamma < \delta$, then\\[5pt] $\dint{\left(\dfrac{x-\delta}{x-\gamma}\right)^{\alpha+\beta+\delta}}$ = ?
+\item $\dint{\dfrac{\cos 5x +\cos 4x}{1-2\sin 3x}}=-g(x)\sin x +C$
+	\begin{enumerate}
+	\item $\dint{g(x)}$ = ?
+	\item $\dint{\dfrac{(1-g(x))^2}{1+\tan x}}$ = ?
+	\end{enumerate}
+	
+\item $\dint{\dfrac{1}{\sqrt{1+\cos x}\ \sqrt{\sin x+ \cos x}}}$
+\item $\dint{(\cos{3x}\cos{5x}\cos{6x}\cos{7x}-\cos{x}\cos{2x}\cos{x}\cos{8x})}$
+\item $\dint{\dfrac{\ln{(1+x)}}{x^2}}$
+\item Evaluate $$\dint{\dfrac{\tan{\left(\dfrac{\pi}{4}-x\right)}}{\cos^2x\sqrt{\tan^3x+\tan^2x+\tan x}}}$$
+\item $\dint{\dfrac{(x-1)\sqrt{x^4+2x^3-x^2+2x+1}}{x^2(x+1)}}$
+\item $\dint{\dfrac{1}{2\sin x+\sec x}}$
+\end{enumerate}
+
+
+
+
+\answer{
+\begin{enumerate}
+\item 
+\item 
+\item 
+\item
+\item 
+\item 
+\item Use $t=\tan{\dfrac{x}{2}}$.
+\item $\dfrac{1}{8}\left( \dfrac{\sin{21x}}{21}-\dfrac{\sin{13x}}{13}\right)+C$
+\item 
+\item $-2\tan^{-1}{\sqrt{\tan x+\cot x +1}}+C$
+\item $\sqrt{t^2+2t-3}-\ln{(t+1+\sqrt{t^2+2t-3})}-\sqrt{3}\sin^{-1}{\left(\dfrac{t+5}{t+2}\right)}+C$, where $t=x+\dfrac{1}{x}$
+\item 
+
+\end{enumerate}
+  
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Definite Integrals}
+
+\section{Basic Rules}
+There are very common basic rules and common mistakes. The basic rules are
+\begin{tcolorbox}[halign=center]
+
+\begin{enumerate}
+\item $\dint{_a^b f(x)}=\dint{_a^bf(a+b-x)}$
+\item $\dint{_a^bf(x)}=\dint{_0^{\frac{b-a}{2}}[f(\frac{a+b}{2}-x)+ f(\frac{a+b}{2}+x)]}$
+	\begin{enumerate}
+	\item $\dint{_0^{2a}f(x)}=\dint{_0^{a}[f(a-x)+ f(a+x)]}$
+	\item $\dint{_{-a}^af(x)}=\dint{_0^{a}[f(-x)+ f(x)]}$
+	\end{enumerate}
+\item $\dint{_{a+mT}^{a+nT}f(x)}=(n-m)\dint{_{0}^{T}f(x)} $, where $f(x)$ is periodic with periodicity $T$.
+\end{enumerate}
+\end{tcolorbox}
+The common mistakes are 
+\begin{enumerate}
+\item \textbf{Limit based problem}: You need to check that \textit{\textbf{there should not be any asymptotic between upper limit and lower limit}}. In that case you need to split up your limit.
+\item \textbf{Substitution based problem}: While substituting $z=f(x)$, we need to check $f(x)$ is asymptotic in domain $\mathbb{D} \in$ (lower limit, upper limit). If there is, just need to split up!
+\end{enumerate}
+\subsubsection{Problems}
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\dint{_{-1}^3 \tan^{-1}{\dfrac{x}{x^2+1}}+ \tan^{-1}{\dfrac{x^2+1}{x}}}$
+	\item $\dint{_0^{\pi/2}\ln \sin x}$
+	\item $\dint{_0^\theta \ln{(1+\tan\theta \tan x})}$
+	\item $\dint{_{-\infty}^\infty \dfrac{2023^{-|x|}}{1+5^{\sin^{-1}{(\sin^5x)}}}}$
+	\item $\dint{_0^{\pi/2}\sqrt{1+\sin x}}$
+	\item $\dint{_0^{\pi}\sqrt{1+\sin x}}$
+	\item $\dint{_0^\infty \dfrac{1}{(x+\frac{1}{x})^2}}$
+	\item $\dint{_1^\infty \dfrac{\ln x}{x^2}}$
+	\item $\dint{_0^\pi \cos{(x+\cos x)}}$
+	\item $\dint{_{-\infty}^0 \dfrac{1}{x^3-1}}$
+	\end{enumerate}
+	\end{multicols}
+\section{Feynman's Trick}
+We need to consider some $I(a)=\dint{_a^bf(x,a)}$ such that $I'(a)$ can be integrated easily. After that we need to integrate that and the constant is evaluated by putting $I(0)$ or some constant for which $\dint{_a^bf(x,0)}$ is integrated easily.
+	\subsubsection{Problems}
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item $\dint{_0^1\dfrac{x^2-1}{\ln x}}$
+	\item $\dint{_0^1\dfrac{\ln{(1+x)}}{x^2+1}}$
+	\item $\dint{\dfrac{\tan^{-1}{(2\sin x)}}{\sin x}}$
+	\item $\dint{}$
+	\end{enumerate}
+	\end{multicols}
+
+\section{Frullani's Integral}
+\begin{tcolorbox}[halign=center]
+\ \hfill$\dint{_0^{\infty} \dfrac{f(ax)-f(bx)}{x}}=(f(\infty)-f(0))\ln{\dfrac{a}{b}}$\hfill \href{https://en.wikipedia.org/wiki/Frullani_integral}{\textbf{[Proof]}}
+\end{tcolorbox}
+	\subsubsection{Problems}
+	\begin{enumerate}
+	%\begin{multicols}{2}
+	\item 
+	%\end{multicols}
+	\end{enumerate}
+	
+\section{Gamma and Beta Integral}
+\section{Laplace Transformation}
+\section{Miscellaneous problems}
+	\subsubsection{Problems}
+	\begin{enumerate}
+	%\begin{multicols}{2}
+	\item $\dint{_0^{2\pi} \dfrac{\min{(\sin x, \cos x)}}{\max{(e^{\sin x}, e^{\cos x})}}}$
+	%\end{multicols}
+	\item Min value of $\displaystyle{f(x)=\int_0^2e^{|t-x|}\ dt}$
+	\item $\dint{_0^{2024} x^2-\lfloor x\rfloor \lceil x \rceil }$
+	\item $\dint{_0^{\pi/2}\dfrac{x}{\tan x}}$
+	\item For all real numbers $x$, let $f(x) = |x^2+x|$, $I_1=\dint{_{-2020}^0 f(x)}$, $I_2=\dint{_0^{2019} f(x)}$, calculate $|I_1-I_2|$.
+	\item $\dint{_{1/e}^e \dfrac{\tan^{-1}x}{x}}$
+	\end{enumerate}
+	
+	
+	\section{Advanced Problems}
+	\subsubsection{Problems}
+
+	\begin{enumerate}
+		%\begin{multicols}{2}
+	
+		%\end{multicols}
+	\item $\displaystyle{\lim_{\epsilon\rightarrow 0^+} \epsilon^4 \int_0^{\dfrac{\pi}{2}-\epsilon}\tan^5x \ dx}=?$
+	\item $\dint{_0^1 \left\lfloor \sqrt{1+\dfrac{1}{x}} \right\rfloor}$
+	\item $\dint{_0^\infty \sin {ax}}$
+	\item $\dint{_0^\infty\dfrac{\cos{ax}-\cos{bx}}{x}}$
+	\item $\dint{_0^\infty\dfrac{b\sin{ax}-a\sin{bx}}{x^2}}$
+	\item $\dint{_0^{\dfrac{\pi}{2}} \dfrac{\sqrt[3]{\tan x}}{(\sin x+\cos x)^2}}$
+	\item $\dint{_0^\pi \left(\dfrac{\sin{2x}\sin{3x}\sin{5x}\sin{30x}}{\sin x \sin{6x}\sin{10x}\sin{15x}}\right)^2}$
+	\item $\dint{_{-1/2}^{1/2} \sqrt{x^2+1+\sqrt{x^4+x^2+1}}}$
+	\item $\left\lfloor 10^{20}\dint{_2^\infty \dfrac{x^9}{x^{20}-48x^{10}+575}}\right\rfloor$
+	\item $\dint{_0^1 \left( \sum_{n=1}^\infty \dfrac{\lfloor2^nx\rfloor}{3^n}\right)^2}$ 
+	\item $\dint{\sqrt{(\sin{20x}+3\sin{21x}+\sin{22x})^2+(\cos{20x}+3\cos{21x}+\cos{22x})^2}}$
+	\item $\dint{_0^\infty \dfrac{e^{-2x}\sin {3x}}{x}}$
+	\item $\dint{_0^{2\pi}\cos{2022x}\ \dfrac{\sin{10050x}}{\sin{50x}}\ \dfrac{\sin{10251x}}{\sin{51x}}}$
+	\item $\dint{_0^1 x^{\frac{1}{3}}(1-x)^{\frac{2}{3}}}$
+	\item $\left\lfloor \log_{10} \dint{_{2022}^\infty 10^{-x^3}} \right\rfloor$
+	\item $\dint{_{-2}^2 \left|(x-2)(x-1)x(x+1)(x+2)\right|}$
+	\item $\dint{_1^2 \left(e^{\dfrac{1}{1-(x-1)^2}}+1\right)+\left(1+\dfrac{1}{\sqrt{1-\ln{(x-1)}}}\right)}$
+	\item $\dint{_0^1 \ln x \ \sin{(\ln x)}}$
+	\item $\dint{_0^1 \ln ^{2020} {x}}$
+	\item $\rint{_{-\infty}^\infty \dfrac{\sin{\left(2x-\dfrac{1}{x}\right)}}{2x^3-x}} $
+	\item $\dint{_p^q \left(e^{\dfrac{1}{1-(x-1)^2}}+1\right)+\left(1+\dfrac{1}{\sqrt{1-\ln{(x-1)}}}\right)}$, where $1\leq p<q$
+	\item $\dint{_0^{100} \left\lceil \sqrt x \right\rceil}$
+	\item $\dint{_0^1 \sqrt{(x-1)^3+1}+x^{2/3}+(1-x)^{3/2}-\sqrt[3]{1-x^2}}$
+	\item Find $\alpha$ such that
+	$$\lim_{x\to0^+}x^\alpha I(x)=a\text{ given } I(x)=\int_0^\infty \sqrt{t+1}\ e^{-xt}\ dt$$
+	where a is a non-zero real number.
+	\item Define $\displaystyle{H_n=\sum_{k=1}^n \frac{1}{k}}$. Evaluate 
+	$$\sum_{n=1}^{2017}\binom {2017}nH_n (-1)^n$$
+	\item The numerical value of the following integral
+	$$\dint{_0^1(-x^2+x)^{2017} \left\lfloor 2017x\right\rfloor}$$ can be expressed as $a\dfrac{(m!)^2}{n!}$, where a is minimized. Find $a+m+n$.
+	\item Let $T$ be defined by the recurrence relation $T_{n+1}= 2xT_n - T_{n-1}$ with $T_0 = 1$ and $T_1 = x$. What is the value of
+	$$\sum_{n=2}^\infty \int_0^1T_n dx$$
+	\item Compute the following limit
+	$$\lim_{n\to\infty} \int_0^1 \frac{nx^n}{\sqrt{4x^3-x^2+1}}\ dx$$
+	\item $\displaystyle{\lim_{n\to\infty}n^2 \int_0^{1/n}x^{x+1}\ dx}=?$
+	\item $\displaystyle{\sum_{a=1}^\infty\sum_{b=1}^\infty \dfrac{1}{a^2b+2ab+ab^2}}=?$
+	\item Let $f : \mathbb {R}_{>0} \to \mathbb {R}$ (where $\mathbb {R}_{>0}$ is the set of all positive real numbers) be differentiable and satisfy
+the equation 
+$$ f(y)-f(x)=\frac{x^x}{y^y}\frac{f(y^y)}{f(x^x)}$$
+for all real $x, y > 0$. Furthermore, $f'(1) = 1$. Find f(x).
+\item Suppose the following equality holds, where $a, b, c$ are integers and $K$ is the constant of integration:
+$$ \int \dfrac{\sin^a x -\cos^a x}{\sin^b x \ \cos^b x}\ dx=\dfrac{\text{cosec}^c \ x}{c}+\dfrac{\sec^c x}{c}+K$$
+If $a = 2021$, compute $a + b + c$.
+	\item Let $c(x)=\dfrac{e^x+e^{-2x}}{2}$, defined in interval $1\leq x\leq 2$, Let $c^{-1}(x)$ be the inverse of $c(x)$.
+Compute
+$$\int_{c(1)}^{c(2)}c^{-1}(x)\ dx$$
+	\item  Compute the infinite sum $$\sum_{n=1}^\infty \dfrac{(-1)^{n-1}}{\binom{n+1}{2}}$$
+	\item $\dint{_0^{\pi/3}\sec x \sqrt{\tan x \sqrt{\tan x \sqrt{\tan x\ \sin x}}}}$
+	\item Compute: $\displaystyle{\lim_{x\to 0}\left( 1+\int_0^x \dfrac{\cos t -1}{t^2}\ dt\right)^\frac{1}{x}}$
+	\item $\dint{_0^{\pi/2} \cot x \ln{(\cos x)}}$
+	\item $\displaystyle{\sum_{n=2}^\infty \ln{\left(\dfrac{n^3+1}{n^3-1}\right)}}$
+	\item $\displaystyle{\sum_{n=2}^\infty \sqrt{n^2+3n+2}-\sqrt{n^2+n}-1}$
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	\item A unit cube is rotated around an axis containing its longest diagonal. Compute the volume swept out by the rotating.
+	\end{enumerate}
+
+\answer{
+%\begin{enumerate*}
+%\begin{tabular}{llll}
+%\item $\dfrac{1}{4}$	 &
+%\item $\dfrac{7}{4}$	&	
+%\item $\dfrac{1}{a}$	&	
+%\item $\ln{\dfrac{b}{a}}$ \\	
+%\item $ab\ln{\dfrac{b}{a}}$
+%\end{tabular}
+
+%\end{enumerate*}
+
+\begin{multicols}{3}
+\begin{enumerate}
+\item $\dfrac{1}{4}$	 
+\item $\dfrac{7}{4}$	
+\item $\dfrac{1}{a}$	
+\item $\ln{\dfrac{b}{a}}$
+\item $ab\ln{\dfrac{b}{a}}$
+\item $\dfrac{2\sqrt{3}\pi}{9}$
+\item $7\pi$
+\item $\dfrac{\sqrt{7}}{2\sqrt 2}$+$\dfrac{3}{4\sqrt 2}\ln{\dfrac{\sqrt 7+2}{\sqrt 3}}$
+\item $10^{16}$+$\dfrac{10^{10}-1}{3}$+$\dfrac{10^4}{5}$
+\item $\dfrac{27}{32}$
+\item $3x+2\sin x+C$
+\item $\tan^{-1}\dfrac{3}{2}$
+\item $6\pi$
+\item $\dfrac{2\pi}{9\sqrt{3}}$
+\item $-2022^3-8$
+\item $\dfrac{19}{3}$
+\item $3$
+\item $\dfrac{1}{2}$
+\item $2020!$
+\item $\pi$
+\item $q^2-p^2$
+\item $715$
+\item $1$
+\item $\dfrac{3}{2}$
+\item $-\dfrac{1}{2017}$
+\item $7060$
+\item $-1$
+\item $\dfrac{1}{2}$
+\item $\dfrac{1}{2}$
+\item $\dfrac{7}{4}$
+\item $x\ln x$
+\item $6060$
+\item $.5e^2+1.25e^{-4}-.75e^{-2}$
+\item $4\ln 2-2$
+\item $\dfrac{8}{7}(2^{7/8}-1)$
+\item $\dfrac{1}{\sqrt{e}}$
+\item $-\dfrac{\pi^2}{24}$
+\item $\ln{3}-\ln 2$
+\item $\dfrac{1}{2}$
+
+
+
+
+
+\item $\dfrac{\pi}{\sqrt{3}}$
+\end{enumerate}
+\end{multicols}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
+	\subsubsection{Problems}
+	\begin{multicols}{2}
+	\begin{enumerate}
+	\item
+	\end{enumerate}
+
+	\end{multicols}
+
+
+\crule[white!60!black!100]{18.5cm}{1cm}
+\begin{center}
+hello\\
+\end{center}
+\def\textsam {hello \hfill hello}
+\textsam\\
+\fcolorbox{black}{white!80!black!100}{ \textsam }
+
+
+\begin{tcolorbox}[colback=white!80!black!100,colframe=black]
+\begin{center}
+\textbf{My Box
+}\end{center}
+\end{tcolorbox}
+
+
+\notebox{\lipsum[2]}
+\tipbox{\lipsum[3]}
+\warningbox{\lipsum[4]}
+\cautionbox{\lipsum[5]}
+\importantbox{\lipsum[6]}
+
+\begin{vwcol}[widths={0.5,0.3,.2},
+ sep=.4cm, justify=flush,rule=0pt,indent=1em] 
+\blindtext
+\end{vwcol}
+\end{document}
