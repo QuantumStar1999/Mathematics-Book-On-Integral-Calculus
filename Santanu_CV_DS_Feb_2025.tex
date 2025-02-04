@@ -5,7 +5,6 @@
 %------------------------
 
 \documentclass[letterpaper,10pt]{article}
-
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -110,8 +109,7 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %% Customisation
 \newcommand{\NAME}{First Last}
@@ -122,34 +120,28 @@
 \newcommand{\LinkedIn}{LinkedIn}
 \newcommand{\GITHUB}{Github}
 
-\begin{document}
-
-%----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
-
-\begin{center}
-    {\Huge \scshape \NAME} \\ \vspace{1.5pt}
-    %\ADDRESS \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}\faPhone\ \PHFirst, \PHSecond ~ \href{mailto: \EMAIL}{\raisebox{-0.2\height}\faEnvelope\  \underline{\EMAIL}} ~ 
-    \href{https://linkedin.com/in//\LinkedIn}{\raisebox{-0.2\height}\faLinkedin\ \underline{\LinkedIn}}  ~
-    \href{https://github.com//\GITHUB}{\raisebox{-0.2\height}\faGithub\ \underline{\GITHUB}}
-    \vspace{-8pt}
-\end{center}
-
-
+%%%%%%%%%%%%%%%
+% Section -> Command
+% Education -> \Education
+% Relevant Coursework -> \RelevantCoursework
+% Experience -> \Experience
+% Projects -> \Projects
+% Technical Skills -> \TechSkill
+% Extra Curricular Activities -> \Extra
 %-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {State University}{Sep. 2017 -- May 2021}
-      {Bachelor of Science in Computer Science}{City, State}
-  \resumeSubHeadingListEnd
+\newcommand{\Education}{
+    \resumeSubHeadingListStart
+        \resumeSubheading
+        {Institute}{S. 2017 -- May 2021}
+        {Bachelor of Science in Computer Science}{City, State}
+        % \resumeSubheading
+        % {State University}{Sep. 2017 -- May 2021}
+        % {Bachelor of Science in Computer Science}{City, State}
+    \resumeSubHeadingListEnd
+}
 
 %------RELEVANT COURSEWORK-------
-\section{Relevant Coursework}
+\newcommand{\RelevantCoursework}{
     %\resumeSubHeadingListStart
         \begin{multicols}{4}
             \begin{itemize}[itemsep=-5pt, parsep=3pt]
@@ -165,10 +157,10 @@
         \end{multicols}
         \vspace*{2.0\multicolsep}
     %\resumeSubHeadingListEnd
-
+}
 
 %-----------EXPERIENCE-----------
-\section{Experience}
+\newcommand{\Experience}{
   \resumeSubHeadingListStart
 
     \resumeSubheading
@@ -190,13 +182,11 @@
         \resumeItem{Collaborated with team members using version control systems such as Git to organize modifications and assign tasks.}
         \resumeItem{Utilized Android Studio as a development environment in order to visualize the application in both iOS and Android.}
     \resumeItemListEnd
-    
   \resumeSubHeadingListEnd
-\vspace{-16pt}
+}
 
 %-----------PROJECTS-----------
-\section{Projects}
-    \vspace{-5pt}
+\newcommand{\Projects}{
     \resumeSubHeadingListStart
       \resumeProjectHeading
           {\textbf{Gym Reservation Bot} $|$ \emph{Python, Selenium, Google Cloud Console}}{January 2021}
@@ -223,12 +213,10 @@
             \resumeItem{Implemented object-oriented programming practices such as inheritance to create different account types and databases.}
           \resumeItemListEnd 
     \resumeSubHeadingListEnd
-\vspace{-15pt}
+}
 
-
-%
 %-----------PROGRAMMING SKILLS-----------
-\section{Technical Skills}
+\newcommand{\TechSkill}{
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      \textbf{Languages}{: Python, Java, C, HTML/CSS, JavaScript, SQL} \\
@@ -236,11 +224,10 @@
      \textbf{Technologies/Frameworks}{: Linux, Jenkins, GitHub, JUnit, WordPress} \\
     }}
  \end{itemize}
- \vspace{-16pt}
-
+}
 
 %-----------INVOLVEMENT---------------
-\section{Leadership / Extracurricular}
+\newcommand{\Extra}{
     \resumeSubHeadingListStart
         \resumeSubheading{Fraternity}{Spring 2020 -- Present}{President}{University Name}
             \resumeItemListStart
@@ -250,6 +237,55 @@
             \resumeItemListEnd
         
     \resumeSubHeadingListEnd
+}
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape \NAME} \\ \vspace{1.5pt}
+    %\ADDRESS \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ \PHFirst, \PHSecond ~ \href{mailto: \EMAIL}{\raisebox{-0.2\height}\faEnvelope\  \underline{\EMAIL}} ~ 
+    \href{https://linkedin.com/in//\LinkedIn}{\raisebox{-0.2\height}\faLinkedin\ \underline{\LinkedIn}}  ~
+    \href{https://github.com//\GITHUB}{\raisebox{-0.2\height}\faGithub\ \underline{\GITHUB}}
+    \vspace{-8pt}
+\end{center}
 
 
+%-----------EDUCATION-----------
+\section{Education}
+	\Education
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+   \RelevantCoursework
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+    \Experience
+    \vspace{-16pt}
+    
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \Projects
+    \vspace{-15pt}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+    \TechSkill
+    \vspace{-16pt}
+
+
+%-----------INVOLVEMENT---------------
+\section{Leadership / Extracurricular}
+    \Extra
+    
 \end{document}
