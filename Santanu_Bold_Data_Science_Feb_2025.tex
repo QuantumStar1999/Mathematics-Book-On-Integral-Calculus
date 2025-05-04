@@ -18,6 +18,9 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
+
+%\usepackage{scalefnt}
+%\usepackage{graphicx,relsize}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
@@ -91,12 +94,20 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+%\newcommand{\resumeProjectHeading}[2]{
+ %   \item
+%    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+%      \small#1 & \textbf{\small #2}\\
+%    \end{tabular*}\vspace{-7pt}
+%}
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
+    \begin{tabular*}{1.002\textwidth}{l@{\extracolsep{\fill}}r}
+      \small{#1} & \textbf{\small #2}\\
     \end{tabular*}\vspace{-7pt}
 }
+\newcommand{\highlighter}[1]{\small{\textbf{#1}}}
+
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
@@ -114,13 +125,14 @@
 %% Customisation
 \newcommand{\NAME}{Santanu Kundu}
 \newcommand{\ADDRESS}{123 Street Name, Town, State 12345}
-\newcommand{\EMAIL}{Santanuk13@gmail.com}
+\newcommand{\EMAIL}{santanuk13@gmail.com}
 \newcommand{\PHFirst}{9875521474}
 \newcommand{\PHSecond}{6289260600}
 \newcommand{\LinkedIn}{santanu-kundu-iitkgp}
 \newcommand{\GITHUB}{QuantumStar1999}
 \newcommand{\GITHUBLatest}{SantanuKGP}
 \newcommand{\KAGGLE}{santanukundu}
+\newcommand{\LinkedInLink}{https://www.linkedin.com/in/santanu-kundu-iitkgp/details/certifications/}
 %%%%%%%%%%%%%%%
 % Section -> Command
 % Education -> \Education
@@ -134,6 +146,8 @@
 
 \newcommand{\Education}{
     \resumeSubHeadingListStart
+       \resumeSubheading {Scaler Academy} {March 2023 -- April 2025}
+       {Data Science and ML Ops} {Bengaluru, Karnataka}
         \resumeSubheading
         {IIT Kharagpur}{August 2018 -- July 2022}
         {B.Tech. in Electronics and Electrical Communication with CGPA 8.15}{Kharagpur, West Bengal}
@@ -154,15 +168,7 @@
                 \item Artificial Intelligence
                 \item Data Science
                 \item Data Visualisation
-                \item Distributed Systems
-                \item Apache Kafka
-                \item Apache Storm
-                \item Apache Akka
-                \item Apache Hadoop Hive
-                \item Team Collaboration
-                \item Predictive Analytics
-                \item Postman 
-                \item Linux
+
                 \item NoSQL             
                 \item MS Powerpoint
                 \item MS Word
@@ -202,29 +208,40 @@
     %\resumeSubHeadingListEnd
 }
 %-----------PROGRAMMING SKILLS-----------
+
 \newcommand{\TechExpertise}{
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, SQL, CPP, Scala, HTML/CSS, JavaScript, C} \\
-     \textbf{Python Libraries}{: Numpy, SciPy, Pandas, Sci-kit, Matplotlib, Plotly, Shap, Optuna, Tensorflow, PyTorch, Keras} \\
-     \textbf{Developer Tools}{: VS Code, IntelliJ IDEA, Google Cloud Platform, AWS, PyCharm, Google Colab, Jupyter Notebook, Tableau} \\
-     \textbf{Technologies/Frameworks}{: Linux, Docker, GitHub, DockerHub, DagsHub, MLflow} \\
-    }}
- \end{itemize}
+ 
+ %------------------------------------------------------
+	% New format 
+ %------------------------------------------------------
+\small
+\renewcommand{\arraystretch}{1.0}
+ \begin{tabular}{p{4.5cm} p{\dimexpr\linewidth-4.5cm}} % Defines column widths for balanced layout
+    \textbf{Languages} & Python, MySQL, PostgreSQL, C++, Scala, HTML/CSS, JavaScript, C, MATLAB \\ 
+    \textbf{Python Libraries} & NumPy, SciPy, Pandas, Scikit-learn, Matplotlib, Plotly, Shap, Optuna, Holidays, Streamlit, TensorFlow, PyTorch, Keras \\ 
+    \textbf{Models} & Regression, Classification, Clustering, Neural Networks, Decision Trees, Random Forest, XGBoost, CatBoost, LGBM, Out-of-Bag, Voting, Bagging, Stacking, GBT, LSTMs \\ 
+    \textbf{Topics} & Predictive Analytics, EDA, Hyperparameter Tuning, Feature Engineering, Model Deployment, Natural Language Processing  \\ 
+    \textbf{Developer Tools} & VS Code, IntelliJ IDEA, PyCharm, Google Colab, Jupyter Notebook, Tableau, Postman, Power BI \\ 
+    \textbf{Distributed Systems} & Apache Kafka, Storm, Akka, Hadoop, Hive, PySpark, Virtual Machines \\ 
+    \textbf{Technologies/Frameworks} & Linux (Bash/Shell), Docker, Git, GitHub, DockerHub, DagsHub, MLflow, AWS, Google Cloud Platform, JIRA, CI/CD, Flask \\ 
+    \textbf{Others} & Agile Development, Scrum, Team Collaboration, Technical Writing, MS Excel, MS Powerpoint, MS Word
+\end{tabular}
+ 
 }
 %-----------EXPERIENCE-----------
 \newcommand{\Experience}{
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Adform India LLP}{August 2022 -- March 2023}
-      {Software Engineer}{Mumbai, Maharashtra}
+      {Adform India LLP}{July 2022 -- April 2023}
+      {Software Developer}{Mumbai, Maharashtra}
       \resumeItemListStart
-        \resumeItem{Developed alert systems to track KPIs, triggering notifications based on specific conditions. Reduced losses by 30\% during winter and ensured 24/7 microservices availability, enhancing system reliability and operational efficiency.}
-        \resumeItem{Managed and optimized dev VMs, ensuring seamless operation, and actively contributed to migrating microservices to Kubernetes, improving scalability by more than 30\%.}
-        \resumeItem{Created a Storm Kafka integration project for testing which decreased time consumption by 50\%. \href{https://github.com/SantanuKGP/Project-03-Storm-Kafka-Integration/blob/main/Producer/src/main/scala/Producer.scala}{{\raisebox{-0.1\height}\faFile\ \underline{Kafka Producer}}} \href{https://github.com/SantanuKGP/Project-03-Storm-Kafka-Integration/tree/main/Project-03-Kafka-Storm-Kafka/src/main/scala}{{\raisebox{-0.1\height}\faFile\ \underline{Storm Bolt}}}}
+        \resumeItem{Developed alert systems to track KPIs, triggering notifications based on specific conditions. \highlighter{Reduced losses by 30\%} in Q4 and ensured 24/7 microservices availability, enhancing system reliability and operational efficiency.}
+        \resumeItem{Managed and optimized dev VMs, ensuring seamless operation, and actively contributed to migrating microservices to Kubernetes, \highlighter{improving scalability by more than 30\%}.}
+        \resumeItem{Implemented a Storm Kafka integration project for scalability testing which \highlighter{decreased time consumption by 50\%}. Sample Code: \href{https://github.com/SantanuKGP/Project-03-Storm-Kafka-Integration/blob/main/Producer/src/main/scala/Producer.scala}{{\raisebox{-0.1\height}\faFile\ \underline{Kafka Producer}}} \href{https://github.com/SantanuKGP/Project-03-Storm-Kafka-Integration/tree/main/Project-03-Kafka-Storm-Kafka/src/main/scala}{{\raisebox{-0.1\height}\faFile\ \underline{Storm Bolt}}}}
         \resumeItem{Completed an intensive leadership development program at Adform’s Denmark HQ, enhancing strategic decision-making skills and communication abilities, which directly contributed to a 20\% increase in team project efficiency within three months.}
-        \resumeItem{Utilized Git, GitHub, Atlassian Jira, Grafana, Kibana and Scala, SBT, Apache Storm, Apache Kafka, distributed Computation systems, AWS, Docker, CI/CD pipeline. }
+        \resumeItem{Leveraged Git, GitHub, and AWS to streamline development processes, enhancing collaboration and reducing project
+turnaround time. }
         %\resumeItem{Scala Atlassian }
         \resumeItemListEnd
         %\begin{itemize}
@@ -243,45 +260,53 @@
     
 	  \resumeProjectHeading{\href{https://www.kaggle.com/competitions/playground-series-s4e4}{\textbf{Binary Prediction of Poisonous Mushrooms}} $|$ \emph{Python, Scikit-learn, Plotly, SHAP, Optuna, SciPy, MLflow }}{August 2024}
 	  		\resumeItemListStart
-	  		\resumeItem{Conducted EDA and trained on $3.1$ million data to predict whether mushroom is poisonous  or not,  Matthews correlation coefficients on train and test data are respectively $0.9816$ and $0.9815$. \href{https://colab.research.google.com/drive/1ohCiUJ0b9MURreUF7vXH7OpgRdORXW0Z?usp=sharing}{\raisebox{-0.2\height}\faFile\ \underline{Source}}}		
-	  		\resumeItem{Developed and implemented a comprehensive data preprocessing  and optimization strategy which refined model performance by optimizing feature selection; the process reduced training time by 20\% while enhancing the overall dataset quality.}
-	  		\resumeItemListEnd \vspace{-13pt}
+	  		\resumeItem{Performed exploratory data analysis (EDA) and \highlighter{trained on $3.1$ million data} to predict whether mushroom is poisonous  or not,  \highlighter{Matthews correlation coefficients on train and test data are respectively 0.9816 and 0.9815}. \href{https://colab.research.google.com/drive/1ohCiUJ0b9MURreUF7vXH7OpgRdORXW0Z?usp=sharing}{\raisebox{-0.2\height}\faFile\ \underline{Source}}}		
+	  		\resumeItem{Designed and implemented a comprehensive data preprocessing  and optimization strategy which refined model performance by optimizing feature selection; the process \highlighter{reduced training time by 20\%} while enhancing the overall dataset quality.}
+	  		\resumeItemListEnd \vspace{-10pt}
 	  		
 	  %----------Project 2-------------
 	  
       \resumeProjectHeading
           {\href{https://www.kaggle.com/competitions/playground-series-s4e4}{\textbf{Regression with an Abalone Dataset}} $|$ \emph{Python, Scikit-learn, Plotly, SHAP, Optuna, SciPy}}{April 2024}
           \resumeItemListStart
-            \resumeItem{Implemented training on 90000 data to predict the number of rings with RMSLE scores: $0.14616$(train) and $0.14654$(test).}
-            \resumeItem{Added 16 new features, preprocessed data, and evaluated models (CatBoost, LGBM, XGB etc.). Optimized hyperparameters using Optuna and analysed feature importance with SHAP to enhance model performance. \href{https://colab.research.google.com/drive/1sE2dx-1mhQXhLR6s85Zsi9JijCbsKsiu?usp=sharing}{\raisebox{-0.2\height}\faFile\ \underline{Source}}}
+            \resumeItem{Executed training on 90000 data to predict the number of rings with \highlighter{RMSLE scores: 0.14616 (train) and 0.14654(test)}.}
+            \resumeItem{\highlighter{Introduced 16 new features}, preprocessed data, and evaluated models (CatBoost, LGBM, XGB etc.). Optimized hyperparameters using Optuna and analysed feature importance with SHAP to enhance model performance. \href{https://colab.research.google.com/drive/1sE2dx-1mhQXhLR6s85Zsi9JijCbsKsiu?usp=sharing}{\raisebox{-0.2\height}\faFile\ \underline{Source}}}
           \resumeItemListEnd
-          \vspace{-13pt}
+          \vspace{-10pt}
           
           %----------Project 3-------------
       \resumeProjectHeading
           {\textbf{Data Visualisation and EDA based on AD Tech Data} $|$ \emph{Python, Pandas, Scikit-learn, Shell, Plotly}}{September 2023}
           \resumeItemListStart
-            \resumeItem{Visualised and organised over 7 million data points, deriving valuable insights and developing a rule-based prediction model with an accuracy of 58.6\% on training data and 58.2\% on test data. \href{https://medium.com/@quantumstar2022/data-visualization-and-eda-based-on-ad-tech-data-e5884dd933ca}{\raisebox{-0.2\height}\faMedium\ \underline{Medium}}}
+            \resumeItem{\highlighter{Visualised and organised over 7 million data points}, deriving valuable insights and developing a rule-based prediction model with an \highlighter{accuracy of 58.6\% on training data and 58.2\% on test data}. \href{https://medium.com/@quantumstar2022/data-visualization-and-eda-based-on-ad-tech-data-e5884dd933ca}{\raisebox{-0.2\height}\faMedium\ \underline{Medium}}}
           \resumeItemListEnd 
-          \vspace{-13pt}
+          \vspace{-10pt}
           
            %----------Project 4-------------
-           
+           \iffalse
           \resumeProjectHeading
           {\textbf{Person detection from Mouse Data} $|$ \emph{Python, Pandas,Scikit-learn}}{October 2021}
           \resumeItemListStart
-           \resumeItem{Collected Mouse pointer position and wheel data for 72 hours, preprocessed and filtered negative position values, added six new features, and devised an RBF-based SVM model, achieving approximately 80\% accuracy on 20\% test data.}
-            %\resumeItem{Collected the Mouse pointer position and Mouse wheel data for 72 hours and organised the data by preprocessing and filtering out negative position data and improved  effectiveness of model adding 6 new features and devised RBF based SVM Model with 80\% train data and got approximately 80\% accuracy on 20\% test data.}
-          \resumeItemListEnd 
-    \resumeSubHeadingListEnd
-}
+           \resumeItem{Collected Mouse pointer position and wheel data for 72 hours, preprocessed and filtered negative position values, added 6 new features, and devised an RBF-based SVM model with data (80\%), \highlighter{achieving closely to 80\% accuracy on test data (20\%)}.}
 
+          \resumeItemListEnd 
+          \fi
+          \vspace{-10pt}
+    \resumeSubHeadingListEnd
+    
+}
+%-----------Certification-------------------------
+\newcommand{\Certification}{
+	\resumeItemListStart
+	\resumeItem{Certified in Google Cloud Platform Infrastructure, Sequences, Time Series and Prediction, and Convolutional Neural Networks in TensorFlow.}
+	\resumeItemListEnd 
+}
 
 %-----------Awards and Achievements---------------
 \newcommand{\Achievements}{
 	\resumeItemListStart
 	
-		\resumeItem{Secured rank 437/3587 top 13\% in Multi-Class Prediction of Obesity Risk prediction and rank 494/2606 top 19\% in Regression with an Abalone Dataset in Kaggle Competitions.}
+		\resumeItem{Secured rank 437/3587 (top 13\%) in Multi-Class Prediction of Obesity Risk prediction and rank 494/2606 (top 19\%) in Regression with an Abalone Dataset in Kaggle Competitions.}
 		\vspace{-2pt}
 		\resumeItem{Cracked JEE Main and Advanced, KVPY SX 2017(Rank 882) and KVPY SA 2016(Rank 437) with JBNSTS Junior(2016) and Senior Scholarship (2018).}
 	\resumeItemListEnd 
@@ -321,30 +346,32 @@
     \vspace{-8pt}
 \end{center}
 
-
 %-----------EDUCATION-----------
 \section{Education}
 	\Education
 
 %------RELEVANT COURSEWORK-------
-\section{Technical Knowledge}
-   \TechSkill
+%\section{Technical Knowledge}
+ %  \TechSkill
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
     \TechExpertise
-    \vspace{-16pt}
+    \vspace{-12pt}
 %-----------EXPERIENCE-----------
 \section{Experience}
     \Experience
-    \vspace{-16pt}
+    \vspace{-14pt}
     
 %-----------PROJECTS-----------
 \section{Projects}
     \vspace{-5pt}
     \Projects
-    \vspace{-15pt}
+    \vspace{12pt}
 
+%----------Certification----------------------
+\section{\href{\LinkedInLink}{Certification}}
+	\Certification
 
 %-----------Awards and Achievements-----------
 \section{Awards and Achievements}

@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper,twoside]{book}
+%\documentclass[12pt]{ieeetran}
+\usepackage{amsmath,amssymb, amsfonts,float,mathtools,enumerate,hyperref,graphicx}
+\usepackage{makecell}
+\usepackage{titlesec} % For section title formatting
+
+\usepackage[top=1in,left=.75in,right=.75in,bottom=1in]{geometry}
+\usepackage{multicol,vwcol}
+\usepackage[inline]{enumitem}
+\usepackage{tikz,lmodern}
+\usepackage[most]{tcolorbox}
+
+%% blind text and multicols
+\usepackage{blindtext,lipsum,xcolor,awesomebox}
+
+\parindent 0px
+
+\newcommand{\AUTHOR}{Santanu Kundu}
+\newcommand{\TITLE}{Practice Sets for Mathematics for Class VIII}
+\newcommand{\SUBTITLE}{Covered all topics CBSE, ICSE, NCERT and all State Boards }
+\newcommand{\DATE}{28th April, 2025}
+\newcommand{\VERSION}{0.0.1}
+%% Settings
+\tcbset{colback=white!80!black!100,colframe=black}
+
+
+%% Macros
+\newcommand{\dint}[1]{\displaystyle{\int #1 \  dx}}
+\newcommand{\rint}[1]{\resizebox{4.0cm}{!}{$\dint{#1}$}}
+\newcommand{\cosec}[1]{\displaystyle{\text{cosec}\ #1}}
+\newcommand{\coseci}[1]{\displaystyle{\text{cosec}^{-1}\ #1}}
+
+\newcommand{\answer}[1]{\textit{\textbf{Answers}} \vhrulefill{.1em}
+\ \\[2pt]
+#1
+\vspace{5pt}\hrule height .1em }
+
+\newcommand\crule[3][black]{\textcolor{#1}{\rule{#2}{#3}}}
+\def\vhrulefill#1{\leaders\hrule height #1\hfill}
+
+\title{\LARGE \TITLE \\ [10pt]
+\large \SUBTITLE
+}
+
+\author{\AUTHOR}
+\date{\DATE}
+\makeatletter\@addtoreset{chapter}{part}\makeatother
+\begin{document}
+\maketitle
+\tableofcontents
+\chapter*{Introduction}
+\addcontentsline{toc}{chapter}{Introduction} \markboth{INTRODUCTION}{} 
+This Books is prepared to boost concept in Mathematics, along with keeping in mind for Olympiad and Competitive based problems.
+\part{Problems}
+
+\part{Miscellaneous Practice Set}
+
+\chapter{MATHEMATICS 01}
+
+	\begin{center}
+	\vspace{-20pt}
+		\begin{multicols}{2}
+		\textbf {Maximum Marks: 50}\\
+\textbf{Start Time:}\\
+\textbf{Time: 1 Hour 30 Minutes}\\
+\textbf{End Time:}\\
+		\end{multicols}
+		\rule{\textwidth}{1pt}
+	\end{center}
+
+\end{document}
