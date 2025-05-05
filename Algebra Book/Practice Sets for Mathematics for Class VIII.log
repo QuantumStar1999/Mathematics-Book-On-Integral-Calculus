@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.2.4)  5 MAY 2025 01:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.2.4)  5 MAY 2025 11:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1135,14 +1135,14 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(54.2025pt, 489.10287pt, 54.2025pt)
+* h-part:(L,W,R)=(54.2025pt, 507.17038pt, 36.135pt)
 * v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=489.10287pt
+* \textwidth=507.17038pt
 * \textheight=700.50687pt
 * \oddsidemargin=-18.06749pt
-* \evensidemargin=-18.06749pt
+* \evensidemargin=-36.135pt
 * \topmargin=-31.8738pt
 * \headheight=12.0pt
 * \headsep=19.8738pt
@@ -1232,9 +1232,9 @@ Chapter 1.
 {C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathit.enc}{
 C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathsy.enc}{C
 :/Users/USER/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-mathex.enc}] [
-10] [11] [12
+10] [11] [12] [13
 
-] [13] [14]
+] [14]
 Chapter 1.
 [15
 
@@ -1245,16 +1245,16 @@ L3 programming layer <2024-01-04>
  ***********
 Package rerunfilecheck Info: File `"Practice Sets for Mathematics for Class VII
 I".out' has not changed.
-(rerunfilecheck)             Checksum: 76A90C89B0D64B7BDBB383EC4915AE2B;1875.
+(rerunfilecheck)             Checksum: 0EB39A8D5E2EE01A92D3B9FC0BD4EFB4;2395.
  ) 
 Here is how much of TeX's memory you used:
- 33102 strings out of 474486
- 673277 string characters out of 5744228
- 1943542 words of memory out of 5000000
- 54775 multiletter control sequences out of 15000+600000
+ 33184 strings out of 474486
+ 673950 string characters out of 5744228
+ 1961542 words of memory out of 5000000
+ 54778 multiletter control sequences out of 15000+600000
  606330 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 88i,10n,96p,470b,718s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 88i,10n,96p,470b,713s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pfb
 ><C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmex10.pfb>
 <C:/Users/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmmi12.pfb><
@@ -1265,9 +1265,9 @@ rs/USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmr8.pfb><C:/Users/
 USER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmro12.pfb><C:/Users/U
 SER/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsy10.pfb>
 Output written on "Practice Sets for Mathematics for Class VIII.pdf" (15 pages,
- 197329 bytes).
+ 212545 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 77 named destinations out of 1000 (max. 500000)
- 237 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 382 PDF objects out of 1000 (max. 8388607)
+ 156 named destinations out of 1000 (max. 500000)
+ 261 words of extra memory for PDF output out of 10000 (max. 10000000)
 
